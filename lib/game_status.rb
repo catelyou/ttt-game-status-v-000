@@ -41,7 +41,7 @@ def over?(board)
 end
 
 def winner?(board)
-  if draw?(board) == true 
-    return nil
+  if winning_combination = won?(board)
+    return board[winning_combination.first]
   end
 end
