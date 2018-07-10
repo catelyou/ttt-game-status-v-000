@@ -41,7 +41,13 @@ def over?(board)
 end
 
 def winner?(board)
-  if won?(board) == false
-    return nil
+  index = []
+  index = won?(board)
+  if board[wincombo[0]] == "X" && board[wincombo[1]] == "X" && board[wincombo[2]] == "X"
+    return "X"
+  elsif board[wincombo[0]] == "O" && board[wincombo[1]] == "O" && board[wincombo[2]] == "O"
+    return "O" 
+  else
+    return nil 
   end
 end
