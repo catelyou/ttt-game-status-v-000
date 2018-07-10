@@ -40,10 +40,8 @@ def over?(board)
   end
 end
 
-def winner?(board)
-  winner = []
-  winner = won?(board)
-  if winner = won?(board)
-    return board[winning_combination.first]
+def winner(board)
+  if winning_combo = won?(board)
+    board[winning_combo.first]
   end
 end
